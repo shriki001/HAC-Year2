@@ -2,11 +2,11 @@ OS1, year B
 * Written by  	: Kfir Matityahu & Michael Shriki
 * login(s) 		: kfirma / michaelshr
 
-File    : os1_kfirma_michaelshr_ex2a.c
+File    : ex2a.c
 Purpose : 
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex2a.c -o ex2a
+Compile : gcc -Wall ex2a.c -o ex2a
 Run     : ex2a
 
 Input : Nothing.
@@ -16,12 +16,12 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex2b.c
+File    : ex2b.c
 Purpose : 
 
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex2b.c -o ex2b
+Compile : gcc -Wall ex2b.c -o ex2b
 Run     : ex2b
 
 Input: Nothing.
