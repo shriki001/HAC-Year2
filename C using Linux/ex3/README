@@ -3,7 +3,7 @@ OS1, year B
 * login(s) 		: kfirma / michaelshr
 
 
-File    : os1_kfirma_michaelshr_ex3a.c
+File    : ex3a.c
 Purpose : In this program the father process defines an array and pefroms the
           following 10 times:
            - raffles numbers into the array.
@@ -18,7 +18,7 @@ Purpose : In this program the father process defines an array and pefroms the
           after the array is sorted)
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex3a.c -o ex3a
+Compile : gcc -Wall ex3a.c -o ex3a
 Run     : ex3a
 
 Input : Nothing.
@@ -35,7 +35,7 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex3b.c
+File    : ex3b.c
 Purpose : This program created an array of raffled numbers and create N
           child processes, each one look at a part of the array cells, cells
           are by the reminder of the index in NUM_OF_CHILDERN is index.
@@ -45,7 +45,7 @@ Purpose : This program created an array of raffled numbers and create N
           the father sort these value, than prints and finish.
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex3b.c -o ex3b
+Compile : gcc -Wall ex3b.c -o ex3b
 Run     : ex3b
 
 Input: Nothing.
@@ -56,7 +56,7 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex3c.c
+File    : ex3c.c
 Purpose : In this program the father process creates 2 children. each child 
 		  raffle a series of numbers that contain only in range [-1,1].
 		  each child when raffle 0 - sent it to the father.
@@ -65,7 +65,7 @@ Purpose : In this program the father process creates 2 children. each child
 		  When a process's counter reaches N - he kills the to other and finish
   	 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex3c.c -o ex3c
+Compile : gcc -Wall ex3c.c -o ex3c
 Run     : ex3c
 
 Input: Nothing.
