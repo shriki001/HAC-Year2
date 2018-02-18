@@ -3,7 +3,7 @@ OS1, year B
 * login(s) 		: kfirma / michaelshr
 
 
-File    : os1_kfirma_michaelshr_ex8a.c
+File    : ex8a.c
 Purpose : This Program does the following:
          defines array of 100 integers, all celles are in range 0 to 10,
          when 0 symboles empty cell.
@@ -26,7 +26,7 @@ Purpose : This Program does the following:
           returned from him.
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex8a.c -o ex8a -lpthread
+Compile : gcc -Wall ex8a.c -o ex8a -lpthread
 Run     : ex8a
 
 Input : Nothing.
@@ -37,7 +37,7 @@ RunTime: Linear as number of threads
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex8b.c
+File    : ex8b.c
 Purpose : This Program does the following:
          the main thread creates 5 threads.
          Each thread runs in an endless loop , raffles a natrual number and
@@ -46,7 +46,7 @@ Purpose : This Program does the following:
          and presets the number which raffled.
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex8b.c -o ex8b -lpthread
+Compile : gcc -Wall ex8b.c -o ex8b -lpthread
 Run     : ex8b
 
 Input: NULL.
