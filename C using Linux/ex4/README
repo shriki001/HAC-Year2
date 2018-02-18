@@ -3,7 +3,7 @@ OS1, year B
 * login(s) 		: kfirma / michaelshr
 
 
-File    : os1_kfirma_michaelshr_ex4a1.c
+File    : ex4a1.c
 Purpose : This Program used as the REGISTRY SERVER.
           keeps the process id-s that connected to the server, this server
           create a message queue and allows 3 operations:
@@ -19,7 +19,7 @@ Purpose : This Program used as the REGISTRY SERVER.
           3: just remove from the database
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex4a1.c -o ex4a1
+Compile : gcc -Wall ex4a1.c -o ex4a1
 Run     : ex4a1
 
 Input : Nothing.
@@ -30,7 +30,7 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex4a2.c
+File    : ex4a2.c
 Purpose : This Program used as the APPLICATIONS SERVER.
           checks the process id-s that connected to the register server
           this server create a message queue and allows 2 operations:
@@ -43,7 +43,7 @@ Purpose : This Program used as the APPLICATIONS SERVER.
           If the process isn't exist on th database, returns -1
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex4a2.c -o ex4a2
+Compile : gcc -Wall ex4a2.c -o ex4a2
 Run     : ex4a2 only after running ex4a1 
 
 Input: Nothing.
@@ -54,7 +54,7 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex4a3.c
+File    : ex4a3.c
 Purpose : This Program us as CLIENT process.
             the client connects to both servers via message queue, 
 	    if it can't registered.
@@ -67,7 +67,7 @@ Purpose : This Program us as CLIENT process.
             server to be removed.
   	 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex4a3.c -o ex4a3
+Compile : gcc -Wall ex4a3.c -o ex4a3
 Run     : ex4a3 only after running ex4a2 (and ex4a1)
 
 Input: Nothing.
@@ -79,11 +79,11 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex4b1.c
+File    : ex4b1.c
 Purpose : same as ex4a1 only with named pipes
   	 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex4b1.c -o ex4b1
+Compile : gcc -Wall ex4b1.c -o ex4b1
 Run     : ex4b1
 
 Input: Nothing.
@@ -94,11 +94,11 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex4b2.c
+File    : ex4b2.c
 Purpose : same as ex4a2 only with named pipes
   	 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex4b2.c -o ex4b2
+Compile : gcc -Wall ex4b2.c -o ex4b2
 Run     : ex4b2 only after running ex4b1
 
 Input: Nothing.
@@ -109,11 +109,11 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex4b3.c
+File    : ex4b3.c
 Purpose : same as ex4b3 only with named pipes
   	 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex4b3.c -o ex4b3
+Compile : gcc -Wall ex4b3.c -o ex4b3
 Run     : ex4b3 only after running ex4b2 (and ex4b1)
 
 Input: Nothing.
