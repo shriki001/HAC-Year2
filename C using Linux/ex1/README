@@ -1,0 +1,115 @@
+OS1, year B
+* Written by  	: Kfir Matityahu & Michael Shriki
+* login(s) 		: kfirma / michaelshr
+
+
+File    : os1_kfirma_michaelshr_ex1a.c
+Purpose : The program defines a (non-dynamic) array by size of 100,000
+		  cells and magrila into it values in range [0,index].
+		  The program creates 2 process that will sort the array (in 2
+		  separate ways). each child(-process) prints the time it took
+		  to him to finish, and more information about him.
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex1a.c -o ex1a
+Run     : ex1a
+
+Input : Nothing.
+
+Output: from The 2 first childern:
+        time it took to do it sort, which sort it performed, the minimum
+        and the maximum values in the array.
+
+        annoncment the the 3rd child(son of the father process) performed
+        a sequential search and time it took, as well the same data for the
+        4th child (son of the 1st child, peformed a binary search).
+
+RunTime: Bubble sort = O(n^2)
+		 Quick sort = at worst O(n^2)
+		 Binary search = O(log(n))
+		 Sequential search = O(n)
+		 In total =  O(n^2)
+		 * when n present the size of entered array
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex1b1.c
+Purpose : This program mimic the shell's command "history". 
+		  This program through the arguments vector a name of a file.
+		  Opens this file for reading, and reading it row by row.
+		  The program shows the file's content over the screen (output to
+		  stdout file)
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex1b1.c -o history
+Run     : history
+
+Input: A string represents a name of a file (through vector argument).
+
+Output: The content of the file's named on the string.
+ 
+RunTime: O(n) as prints n commnads
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex1b2.c
+Purpose : This program mimic the shell's command "echo". 
+		  This program through the arguments vector a string.
+		  The program shows the strings's content over the screen (output to
+          stdout file).
+-------------------------------------------------------------------------------
+
+Compile : gcc -Wall os1_kfirma_michaelshr_ex1b2.c -o echo
+Run     : echo
+
+Input: A string (through vector argument).
+
+Output: The string's content (on stdout).
+ 
+RunTime: O(1) as only prints
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex1b3.c
+Purpose : This program mimic the shell's command "ps". 
+          If the program executed without any argument, shows the process ID 
+          of the current process's father over the screen. 
+          In case it executed with the argument "-a", shows the process IDs
+          of the current process and it's father over the screen.
+          If executed on any other way - an error message will be prompted
+          and program will be teriminated.
+-------------------------------------------------------------------------------
+
+* Written by  	: Kfir Matityahu & Michael Shriki
+* ID(s)	 	   	: 205425960 / 305599417
+* login(s) 		: kfirma / michaelshr
+
+Compile : gcc -Wall os1_kfirma_michaelshr_ex1b3.c -o ps
+Run		: ps
+
+Input:  No, except an argumant.
+
+Output: The process ID of the current process's father (and the current 
+		process's ID if "-a" was entered as argument).  
+ 
+RunTime: O(1) as only prints
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex1b4.c
+Purpose : This program mimic the shell environment. 
+          This program through the arguments vector a name of a file that it
+          will write on him the commands the of user's input.
+		  The program runs as a loop, each iteration the user can input the
+		  following commands:
+		  history, echo, ps and exit.
+		  the program perfroms the requseted command (if exist).
+		  when the command exit requested - the program wiil delete the 
+		  history file and finally ends.
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex1b4.c -o shell
+Run     : shell
+
+Input: An input file name (at first as argument), than a series of commands.
+
+Output: Accordingly for each command output.
+ 
+RunTime: O(n) as n represents the number of the commands
+

@@ -1,0 +1,46 @@
+OS1, year B
+* Written by  	: Kfir Matityahu & Michael Shriki
+* login(s) 		: kfirma / michaelshr
+
+
+File    : ex7a.c
+Purpose : This Program use as the SERVER program.
+          and allows execution of 3 functions:
+          1) function that get a string, and return if its a palindrome
+          2) function that get a double number, and return if its power by 2
+          3) function that get a char, and 2 integers and return the
+             result of the char on them (e.g "+ 1 3" will return 4(= 1 + 3).
+
+-------------------------------------------------------------------------------
+
+Compile : gcc rpc_gen_svc.c ex7a.c -lm -o ex7a
+Run     : ex7a1
+
+Input : Nothing.
+
+Output: Nothing.
+
+RunTime: Linear as input size
+
+===============================================================================
+
+File    : ex7b.c
+Purpose : This Program use as the CLIENT program.
+          It will run in loop, in each iteration, the program reads from the
+          user which operation he wants to do (a number in range 0-3) and the
+          right data that required for the operation. it got the value that
+          return from the server and present it to the user.
+          Runs as long as user don't ask to exit
+
+-------------------------------------------------------------------------------
+
+Compile : gcc rpc_gen_clnt.c ex7b.c -o ex7b
+Run     : ex7b <SERVER IP>  only after running ex7a // e.g: ./ex7b localhost
+
+Input: a number (0-3) of operation to do.
+
+Output: the result got from the server (number).
+ 
+RunTime: Linear as input size
+
+===============================================================================

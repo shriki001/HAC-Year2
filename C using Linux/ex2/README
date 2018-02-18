@@ -1,0 +1,33 @@
+OS1, year B
+* Written by  	: Kfir Matityahu & Michael Shriki
+* login(s) 		: kfirma / michaelshr
+
+File    : os1_kfirma_michaelshr_ex2a.c
+Purpose : 
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex2a.c -o ex2a
+Run     : ex2a
+
+Input : Nothing.
+
+Output: whene a procces get signal he print a message  
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex2b.c
+Purpose : 
+
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex2b.c -o ex2b
+Run     : ex2b
+
+Input: Nothing.
+
+Output: when a process send a signal to the other process they rase until some 
+	process surrender and the othe one win  
+ 
+RunTime: NULL
+

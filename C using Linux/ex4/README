@@ -1,0 +1,125 @@
+OS1, year B
+* Written by  	: Kfir Matityahu & Michael Shriki
+* login(s) 		: kfirma / michaelshr
+
+
+File    : os1_kfirma_michaelshr_ex4a1.c
+Purpose : This Program used as the REGISTRY SERVER.
+          keeps the process id-s that connected to the server, this server
+          create a message queue and allows 3 operations:
+          1) add a new process
+          2) check if a process if registered on system
+          3) removal of existing process
+          
+	  when get code:
+          1: if successed to add, return 0.
+             if not - return 1 because it alredy exist, and return 2
+             because it not exist at all.
+          2: if exist -return 1, else -return 0.
+          3: just remove from the database
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex4a1.c -o ex4a1
+Run     : ex4a1
+
+Input : Nothing.
+
+Output: Nothing.
+
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex4a2.c
+Purpose : This Program used as the APPLICATIONS SERVER.
+          checks the process id-s that connected to the register server
+          this server create a message queue and allows 2 operations:
+          1) check a primery of a number
+          2) check if a string is palindrome
+
+          If the process exist on th database, if the result is "true"
+          returns 1, if "false" - returns 0. to add, returns 0.
+
+          If the process isn't exist on th database, returns -1
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex4a2.c -o ex4a2
+Run     : ex4a2 only after running ex4a1 
+
+Input: Nothing.
+
+Output: Nothing.
+ 
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex4a3.c
+Purpose : This Program us as CLIENT process.
+            the client connects to both servers via message queue, 
+	    if it can't registered.
+            
+	    if it sucseeded:
+            reads a char from user, if it 'n' referring to operation on
+            number, if it 's' referring to operation on string.
+            (to the application server)
+            when reads 'e' - the client process ends and calls the register
+            server to be removed.
+  	 
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex4a3.c -o ex4a3
+Run     : ex4a3 only after running ex4a2 (and ex4a1)
+
+Input: Nothing.
+
+Output: 0/1 by the answer the (application) server
+        Informative messages for the user
+ 
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex4b1.c
+Purpose : same as ex4a1 only with named pipes
+  	 
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex4b1.c -o ex4b1
+Run     : ex4b1
+
+Input: Nothing.
+
+Output: Nothing.
+ 
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex4b2.c
+Purpose : same as ex4a2 only with named pipes
+  	 
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex4b2.c -o ex4b2
+Run     : ex4b2 only after running ex4b1
+
+Input: Nothing.
+
+Output: Nothing.
+ 
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex4b3.c
+Purpose : same as ex4b3 only with named pipes
+  	 
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex4b3.c -o ex4b3
+Run     : ex4b3 only after running ex4b2 (and ex4b1)
+
+Input: Nothing.
+
+Output: 0/1 by the answer the (application) server
+        Informative messages for the user
+ 
+RunTime: NULL
+

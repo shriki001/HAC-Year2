@@ -1,0 +1,9 @@
+compile this project:
+rpcgen rpc_gen.x
+gcc rpc_gen_svc.c ex7a.c -lm -o server
+gcc rpc_gen_clnt.c ex7b.c -o client
+
+run:
+./server&
+./client localhost
+

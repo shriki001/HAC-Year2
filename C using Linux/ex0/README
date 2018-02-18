@@ -1,0 +1,22 @@
+OS1, year B
+
+File:ex0.c
+This program get through the argument vector name of input file.
+
+===============================================================================
+
+* Written by  	: Kfir Matityahu & Michael Shriki
+* login	   		: kfirma / michaelshr
+
+The program read the input file and creates a 2d-dynamic array.
+
+Compile: gcc -Wall ex0 -o ex0
+Run: ex0
+
+Input: 	An input file;
+      
+Output: The row in the created dynamic array that all of it's elements are
+	are greater respectively from the elements on the same column
+	(if exist, -1 if dosen't)
+RunTime: m*n^2 when m is the lines_len array and n is the 2nd array  
+===============================================================================

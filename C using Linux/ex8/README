@@ -1,0 +1,58 @@
+OS1, year B
+* Written by  	: Kfir Matityahu & Michael Shriki
+* login(s) 		: kfirma / michaelshr
+
+
+File    : os1_kfirma_michaelshr_ex8a.c
+Purpose : This Program does the following:
+         defines array of 100 integers, all celles are in range 0 to 10,
+         when 0 symboles empty cell.
+         the main thread creates 6 semi-threads:
+         - The first 3 ones:
+           Each one raffles a number in range (-10,10),
+           if the raffled number is positive, it inserts it into the array
+           (as long as have space).
+           if the raffled number is negetive, it 'empty' his negetive
+           from the array (mean it put 0 in his cell).
+           Each one, counts how many numbers inserted an how much emptied.
+
+          - The other 3 ones:
+          Each one raffles 1000 times a number in range 1 to 10, and
+          checking if it exist in array. finally return how much from
+          the values he searched are found in array
+
+          The main thread, after creating all (6) semi-threads, waiting
+          for them , and for each semi-thread presents the data it
+          returned from him.
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex8a.c -o ex8a -lpthread
+Run     : ex8a
+
+Input : Nothing.
+
+Output: NULL
+
+RunTime: Linear as number of threads
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex8b.c
+Purpose : This Program does the following:
+         the main thread creates 5 threads.
+         Each thread runs in an endless loop , raffles a natrual number and
+         checks if it a prime.
+         if it's a prime, this thread cancels all the other (4) threads
+         and presets the number which raffled.
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex8b.c -o ex8b -lpthread
+Run     : ex8b
+
+Input: NULL.
+
+Output: The data return from each (semi) thread.
+ 
+RunTime: Linear as number of threads
+
+===============================================================================

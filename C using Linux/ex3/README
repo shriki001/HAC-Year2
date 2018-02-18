@@ -1,0 +1,80 @@
+OS1, year B
+* Written by  	: Kfir Matityahu & Michael Shriki
+* login(s) 		: kfirma / michaelshr
+
+
+File    : os1_kfirma_michaelshr_ex3a.c
+Purpose : In this program the father process defines an array and pefroms the
+          following 10 times:
+           - raffles numbers into the array.
+           - creates 2 children that sorting the array (first bubble-sort,
+             the other one quick-sort)
+
+          The father process gets trough the pipe how much time it took
+          for each one to sort the array.
+
+          the first raffles a number 10 times and creating a child process
+          that search the array before it sorted (doing similarly a search
+          after the array is sorted)
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex3a.c -o ex3a
+Run     : ex3a
+
+Input : Nothing.
+
+Output: from The 2 first children:
+        time it took to do it sort, which sort it performed, the minimum
+        and the maximum values in the array.
+
+        announcement the the 3rd child(son of the father process) performed
+        a sequential search and time it took, as well the same data for the
+         4th child (son of the 1st child, performed a binary search).
+
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex3b.c
+Purpose : This program created an array of raffled numbers and create N
+          child processes, each one look at a part of the array cells, cells
+          are by the reminder of the index in NUM_OF_CHILDERN is index.
+          (For example: if there are 5 children ,the 1st child is in charge of
+          looking at arr[1],arr[6],arr[11]... ,etc).
+          all children sent the prime numbers they found to the father and
+          the father sort these value, than prints and finish.
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex3b.c -o ex3b
+Run     : ex3b
+
+Input: Nothing.
+
+Output: The (prime) values that got from the children processes,at sorted order
+ 
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex3c.c
+Purpose : In this program the father process creates 2 children. each child 
+		  raffle a series of numbers that contain only in range [-1,1].
+		  each child when raffle 0 - sent it to the father.
+		  the first children, when raffled -1 sent to his brother; when raffled
+		  1 , grows his counter by 1. in simetric way for the 2nd child.
+		  When a process's counter reaches N - he kills the to other and finish
+  	 
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex3c.c -o ex3c
+Run     : ex3c
+
+Input: Nothing.
+
+Output: The number that the 'winner' process counted
+ 
+RunTime: NULL
+
+Race mode : all processes runnig together, no one wait for anoter so it can be 
+	    1 to 3 winners in the program depend if some process get to N first
+	    
+

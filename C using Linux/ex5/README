@@ -1,0 +1,105 @@
+OS1, year B
+* Written by  	: Kfir Matityahu & Michael Shriki
+* login(s) 		: kfirma / michaelshr
+
+
+File    : os1_kfirma_michaelshr_ex5a1.c
+Purpose : This Program used as the REGISTRY SERVER.
+	  this server create a shared memory to storage an process id-s array 
+          and create a message queue and allows 3 operations:
+          1) add a new process
+          2) check if a process if registered on system
+          3) removal of existing process
+          
+	  when get code:
+          1: if successed to add, return 0.
+             if not - return 1 because it alredy exist, and return 2
+             because it not exist at all.
+          2: if exist -return 1, else -return 0.
+          3: just remove from the database
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex5a1.c -o ex5a1
+Run     : ex5a1
+
+Input : Nothing.
+
+Output: Nothing.
+
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex5a2.c
+Purpose : This Program used as the APPLICATIONS SERVER.
+	  conect to REGISTRY SERVER shared memory, checks the process id-s that 
+	  connected to the register server in the memory block 
+          this server create a message queue and allows 2 operations:
+          1) check a primery of a number
+          2) check if a string is palindrome
+
+          If the process exist on th database, if the result is "true"
+          returns 1, if "false" - returns 0. to add, returns 0.
+
+          If the process isn't exist on th database, returns -1
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex5a2.c -o ex5a2
+Run     : ex5a2 only after running ex5a1 
+
+Input: Nothing.
+
+Output: Nothing.
+ 
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex5a3.c
+Purpose : This Program us as CLIENT process.
+            the client connects to both servers via message queue, 
+	    if it can't registered.
+	    if it sucseeded:
+            reads a char from user, if it 'n' referring to operation on
+            number, if it 's' referring to operation on string.
+            (to the application server)
+            when reads 'e' - the client process ends and calls the register
+            server to be removed.
+  	 
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex5a3.c -o ex5a3
+Run     : ex5a3 only after running ex5a2 (and ex5a1)
+
+Input: Nothing.
+
+Output: 0/1 by the answer the (application) server
+        Informative messages for the user
+ 
+RunTime: NULL
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex5b.c
+Purpose : Father process allocate shared memory and produces 2 children
+          processes. Each one of the children raffles on loop a number until
+          he raffles a prime number.
+          When doing so (he raffled a prime number):
+          he stores him at the shared memory.
+          kill his 'brother' (the other child process).
+          sends a signal to (his) father process and finish.
+          The father process views the number - and also finished.
+  	 
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex5b1.c -o ex5b
+Run     : ex5b
+
+Input: Nothing.
+
+Output: The prime number one of the child (succeeded) to raffle.
+ 
+RunTime: NULL
+
+Race Mode: son a can killed son b before son b get prime number and send signal 
+	   to father. son b can do the same right in time son a do that 
+	   and father can wait for the signal that will not come 
+-------------------------------------------------------------------------------

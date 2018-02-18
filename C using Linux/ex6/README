@@ -1,0 +1,81 @@
+OS1, year B
+* Written by  	: Kfir Matityahu & Michael Shriki
+* login(s) 		: kfirma / michaelshr
+
+
+File    : os1_kfirma_michaelshr_ex6a1.c
+Purpose : This Program used as the REGISTRY SERVER.
+	  this server open a socket for clients and allows 2 operations:
+          1) add a new process
+          2) check if a process if registered on system
+          
+	  when get code:
+          1: if successed to add, return 0.
+             if not - return 1 because it alredy exist, and return 2
+             because it not exist at all.
+          2: if exist -return 1, else -return 0.
+	  if the server found out that a client disconnect he removes him
+	  from the file descriptor database
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex6a1.c -o ex6a1
+Run     : ex6a1 <Server Port> // e.g: ./ex6a1 1234
+
+Input : Nothing.
+
+Output: Nothing.
+
+RunTime: Linear as input size
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex6a2.c
+Purpose : This Program used as the APPLICATIONS SERVER.
+	  conect to REGISTRY SERVER socket, checks the process id-s that 
+	  connected to the register server via file descriptor database  
+          this server create a socket and allows 2 operations:
+          1) check a primery of a number
+          2) check if a string is palindrome
+
+          If the process exist on th database, if the result is "true"
+          returns 1, if "false" - returns 0. to add, returns 0.
+          If the process isn't exist on th database, returns -1
+
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex6a2.c -o ex6a2
+Run     : ex6a2 <Server Port> <REGISTRY SERVER IP> <REGISTRY SERVER PORT>
+	  only after running ex6a1 // e.g: ./ex6a2 4321 localhost 1234
+
+Input: Nothing.
+
+Output: Nothing.
+ 
+RunTime: Linear as input size
+
+===============================================================================
+
+File    : os1_kfirma_michaelshr_ex6a3.c
+Purpose : This Program us as CLIENT process.
+            the client connects to both servers sockets, 
+	    if it can't registered.
+	    if it sucseeded:
+            reads a char from user, if it 'n' referring to operation on
+            number, if it 's' referring to operation on string.
+            (to the application server)
+            when reads 'e' - the client process exit.
+  	 
+-------------------------------------------------------------------------------
+Compile : gcc -Wall os1_kfirma_michaelshr_ex6a3.c -o ex6a3
+Run     : ex6a3 <REGISTRY SERVER IP> <REGISTRY SERVER PORT> 
+		<APPLICATIONS SERVER IP> <APPLICATIONS SERVER PORT>
+	// e.g: ./ex6a3 localhost 1234 localhost 4321
+	  only after running ex6a2 (and ex6a1)
+
+Input: Nothing.
+
+Output: 0/1 by the answer the (application) server
+        Informative messages for the user
+ 
+RunTime: Linear as input size
+
+===============================================================================
