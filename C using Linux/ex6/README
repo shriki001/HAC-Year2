@@ -3,7 +3,7 @@ OS1, year B
 * login(s) 		: kfirma / michaelshr
 
 
-File    : os1_kfirma_michaelshr_ex6a1.c
+File    : ex6a1.c
 Purpose : This Program used as the REGISTRY SERVER.
 	  this server open a socket for clients and allows 2 operations:
           1) add a new process
@@ -18,7 +18,7 @@ Purpose : This Program used as the REGISTRY SERVER.
 	  from the file descriptor database
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex6a1.c -o ex6a1
+Compile : gcc -Wall ex6a1.c -o ex6a1
 Run     : ex6a1 <Server Port> // e.g: ./ex6a1 1234
 
 Input : Nothing.
@@ -29,7 +29,7 @@ RunTime: Linear as input size
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex6a2.c
+File    : ex6a2.c
 Purpose : This Program used as the APPLICATIONS SERVER.
 	  conect to REGISTRY SERVER socket, checks the process id-s that 
 	  connected to the register server via file descriptor database  
@@ -42,7 +42,7 @@ Purpose : This Program used as the APPLICATIONS SERVER.
           If the process isn't exist on th database, returns -1
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex6a2.c -o ex6a2
+Compile : gcc -Wall ex6a2.c -o ex6a2
 Run     : ex6a2 <Server Port> <REGISTRY SERVER IP> <REGISTRY SERVER PORT>
 	  only after running ex6a1 // e.g: ./ex6a2 4321 localhost 1234
 
@@ -54,7 +54,7 @@ RunTime: Linear as input size
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex6a3.c
+File    : ex6a3.c
 Purpose : This Program us as CLIENT process.
             the client connects to both servers sockets, 
 	    if it can't registered.
@@ -65,7 +65,7 @@ Purpose : This Program us as CLIENT process.
             when reads 'e' - the client process exit.
   	 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex6a3.c -o ex6a3
+Compile : gcc -Wall ex6a3.c -o ex6a3
 Run     : ex6a3 <REGISTRY SERVER IP> <REGISTRY SERVER PORT> 
 		<APPLICATIONS SERVER IP> <APPLICATIONS SERVER PORT>
 	// e.g: ./ex6a3 localhost 1234 localhost 4321
