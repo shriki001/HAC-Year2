@@ -3,7 +3,7 @@ OS1, year B
 * login(s) 		: kfirma / michaelshr
 
 
-File    : os1_kfirma_michaelshr_ex5a1.c
+File    : ex5a1.c
 Purpose : This Program used as the REGISTRY SERVER.
 	  this server create a shared memory to storage an process id-s array 
           and create a message queue and allows 3 operations:
@@ -19,7 +19,7 @@ Purpose : This Program used as the REGISTRY SERVER.
           3: just remove from the database
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex5a1.c -o ex5a1
+Compile : gcc -Wall ex5a1.c -o ex5a1
 Run     : ex5a1
 
 Input : Nothing.
@@ -30,7 +30,7 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex5a2.c
+File    : ex5a2.c
 Purpose : This Program used as the APPLICATIONS SERVER.
 	  conect to REGISTRY SERVER shared memory, checks the process id-s that 
 	  connected to the register server in the memory block 
@@ -44,7 +44,7 @@ Purpose : This Program used as the APPLICATIONS SERVER.
           If the process isn't exist on th database, returns -1
 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex5a2.c -o ex5a2
+Compile : gcc -Wall ex5a2.c -o ex5a2
 Run     : ex5a2 only after running ex5a1 
 
 Input: Nothing.
@@ -55,7 +55,7 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex5a3.c
+File    : ex5a3.c
 Purpose : This Program us as CLIENT process.
             the client connects to both servers via message queue, 
 	    if it can't registered.
@@ -67,7 +67,7 @@ Purpose : This Program us as CLIENT process.
             server to be removed.
   	 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex5a3.c -o ex5a3
+Compile : gcc -Wall ex5a3.c -o ex5a3
 Run     : ex5a3 only after running ex5a2 (and ex5a1)
 
 Input: Nothing.
@@ -79,7 +79,7 @@ RunTime: NULL
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex5b.c
+File    : ex5b.c
 Purpose : Father process allocate shared memory and produces 2 children
           processes. Each one of the children raffles on loop a number until
           he raffles a prime number.
@@ -90,7 +90,7 @@ Purpose : Father process allocate shared memory and produces 2 children
           The father process views the number - and also finished.
   	 
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex5b1.c -o ex5b
+Compile : gcc -Wall ex5b1.c -o ex5b
 Run     : ex5b
 
 Input: Nothing.
