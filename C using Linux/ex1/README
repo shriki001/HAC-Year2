@@ -3,14 +3,14 @@ OS1, year B
 * login(s) 		: kfirma / michaelshr
 
 
-File    : os1_kfirma_michaelshr_ex1a.c
+File    : ex1a.c
 Purpose : The program defines a (non-dynamic) array by size of 100,000
 		  cells and magrila into it values in range [0,index].
 		  The program creates 2 process that will sort the array (in 2
 		  separate ways). each child(-process) prints the time it took
 		  to him to finish, and more information about him.
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex1a.c -o ex1a
+Compile : gcc -Wall ex1a.c -o ex1a
 Run     : ex1a
 
 Input : Nothing.
@@ -31,14 +31,14 @@ RunTime: Bubble sort = O(n^2)
 		 * when n present the size of entered array
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex1b1.c
+File    : ex1b1.c
 Purpose : This program mimic the shell's command "history". 
 		  This program through the arguments vector a name of a file.
 		  Opens this file for reading, and reading it row by row.
 		  The program shows the file's content over the screen (output to
 		  stdout file)
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex1b1.c -o history
+Compile : gcc -Wall ex1b1.c -o history
 Run     : history
 
 Input: A string represents a name of a file (through vector argument).
@@ -49,14 +49,14 @@ RunTime: O(n) as prints n commnads
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex1b2.c
+File    : ex1b2.c
 Purpose : This program mimic the shell's command "echo". 
 		  This program through the arguments vector a string.
 		  The program shows the strings's content over the screen (output to
           stdout file).
 -------------------------------------------------------------------------------
 
-Compile : gcc -Wall os1_kfirma_michaelshr_ex1b2.c -o echo
+Compile : gcc -Wall ex1b2.c -o echo
 Run     : echo
 
 Input: A string (through vector argument).
@@ -67,7 +67,7 @@ RunTime: O(1) as only prints
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex1b3.c
+File    : ex1b3.c
 Purpose : This program mimic the shell's command "ps". 
           If the program executed without any argument, shows the process ID 
           of the current process's father over the screen. 
@@ -78,10 +78,9 @@ Purpose : This program mimic the shell's command "ps".
 -------------------------------------------------------------------------------
 
 * Written by  	: Kfir Matityahu & Michael Shriki
-* ID(s)	 	   	: 205425960 / 305599417
 * login(s) 		: kfirma / michaelshr
 
-Compile : gcc -Wall os1_kfirma_michaelshr_ex1b3.c -o ps
+Compile : gcc -Wall ex1b3.c -o ps
 Run		: ps
 
 Input:  No, except an argumant.
@@ -93,7 +92,7 @@ RunTime: O(1) as only prints
 
 ===============================================================================
 
-File    : os1_kfirma_michaelshr_ex1b4.c
+File    : ex1b4.c
 Purpose : This program mimic the shell environment. 
           This program through the arguments vector a name of a file that it
           will write on him the commands the of user's input.
@@ -104,7 +103,7 @@ Purpose : This program mimic the shell environment.
 		  when the command exit requested - the program wiil delete the 
 		  history file and finally ends.
 -------------------------------------------------------------------------------
-Compile : gcc -Wall os1_kfirma_michaelshr_ex1b4.c -o shell
+Compile : gcc -Wall ex1b4.c -o shell
 Run     : shell
 
 Input: An input file name (at first as argument), than a series of commands.
