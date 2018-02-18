@@ -9,7 +9,6 @@
 *            server to be removed.
 * =============================================================================
 * Written by  	: Kfir Matityahu & Michael Shriki
-* ID	 	   	: 205425960 / 305599417
 * login	   		: kfirma / michaelshr
 * Course/Year   : OS1 2018
 * Year	   		: B
