@@ -2,6 +2,7 @@ OS1, year B
 * Written by  	: Kfir Matityahu & Michael Shriki
 * login(s) 		: kfirma / michaelshr
 
+Thread for Linux
 
 File    : ex1a.c
 Purpose : The program defines a (non-dynamic) array by size of 100,000

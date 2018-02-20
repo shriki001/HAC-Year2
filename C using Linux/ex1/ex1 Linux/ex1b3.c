@@ -1,4 +1,5 @@
 /******************************************************************************
+* Thread for Linux
 * Exr. #1b3: This program mimic the shell's command "ps". 
 *			 If the program executed without any argument, shows the process ID 
 *			 of the current process's father over the screen. 
