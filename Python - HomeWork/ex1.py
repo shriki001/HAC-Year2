@@ -5,7 +5,7 @@
 # Writen by: Michael Shriki login = michaelshr
 #            Kfir Matityahu login = kfirma
 #
-# Run: ex1.py
+# Run: ex1.py using Python interpreter
 #%%--------------------------------------------------------------------------%%#
 
 """
@@ -114,7 +114,7 @@ def ex4():
                 pass
             else:
                 for i, a in enumerate(my_stack):
-                    print(i + 1, a)
+                    print(i, a)
         else:
             print("This key isn't exist!")
         user_input = input("Enter a command (i: insert, e: Eject, p: print): ")
