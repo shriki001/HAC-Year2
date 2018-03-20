@@ -2,8 +2,7 @@
 #
 # File:ex1.py
 # ==============================================================================
-# Writen by: Michael Shriki login = michaelshr
-#            Kfir Matityahu login = kfirma
+# Writen by: Michael Shrik, Kfir Matityahu
 #
 # Run: ex1.py using Python interpreter
 #%%--------------------------------------------------------------------------%%#
