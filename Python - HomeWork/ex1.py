@@ -2,10 +2,10 @@
 #
 # File:ex1.py
 # ==============================================================================
-# Writen by: Michael Shriki login = michaelshr
-#            Kfir Matityahu login = kfirma
+# Writen by: Michael Shriki login = michaelshr id = 305599417
+#            Kfir Matityahu login = kfirma     id = 205425960
 #
-# Run: ex1.py
+# Run: ex1.py using Python interpreter
 #%%--------------------------------------------------------------------------%%#
 
 """
@@ -23,9 +23,9 @@ def ex1():
 ################################################################################
 
 """
-    Exercises 2: Solves the question - if you buy 100 tickets for 400$, when each
-    ticket costs either 3$,10$ or 15$
-        How many tickets of each type did you buy?
+    Exercises 2: Solves the question - if you buy 100 tickets for 400$, when 
+    each ticket costs either 3$,10$ or 15$
+    How many tickets of each type did you buy?
 """
 
 
@@ -50,12 +50,10 @@ def ex2():
 
 """
     Exercises 3: Plays with user 7 boom! where starting player is selected 
-        randomly for extra fun.
-        Each player types the next number, but if the number is a multiple of 7 
-        or has 7 in it then player must type
-        "Boom" instead of the number. Also correct order of numbers must be 
-        kept. 
-        Player is winner if was able to get to 30.
+    randomly for extra fun.
+    Each player types the next number, but if the number is a multiple of 7 or 
+    has 7 in it then player must type "Boom" instead of the number. Also correct
+    order of numbers must be kept. Player is winner if was able to get to 30.
 """
 
 
@@ -72,7 +70,9 @@ def ex3():
             user_choice = input("User: ")
             if user_choice == "Boom!" and check(turn):
                 pass
-            elif int(user_choice) == turn:
+            elif user_choice.isdecimal() and int(user_choice) == turn and not \
+                    check(
+                    int(user_choice)):
                 pass
             else:
                 print("You Lost!")
@@ -114,7 +114,7 @@ def ex4():
                 pass
             else:
                 for i, a in enumerate(my_stack):
-                    print(i + 1, a)
+                    print(i, a)
         else:
             print("This key isn't exist!")
         user_input = input("Enter a command (i: insert, e: Eject, p: print): ")
@@ -129,11 +129,11 @@ def main():
     0 will exit the program.
     For all other inputs, the program will display a retry message.
     """
-    quest = [ex1, ex2, ex3, ex4]
+    exercises = [ex1, ex2, ex3, ex4]
     menu = int(input("Enter Exercises num: (0 to Exit)\n"))
     while menu != 0:
         if 0 < menu <= 4:
-            quest[menu-1]()
+            exercises[menu-1]()
         else:
             print("This Exercises isn't exist!")
         menu = int(input("Enter Exercises num: (0 to Exit)\n"))
