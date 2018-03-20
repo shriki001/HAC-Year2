@@ -2,8 +2,12 @@
 #
 # File:ex1.py
 # ==============================================================================
+<<<<<<< HEAD
 # Writen by: Michael Shriki login = michaelshr id = 305599417
 #            Kfir Matityahu login = kfirma     id = 205425960
+=======
+# Writen by: Michael Shrik, Kfir Matityahu
+>>>>>>> 02e46ab13b8c5d7c223cab76da9ec455d1046f61
 #
 # Run: ex1.py using Python interpreter
 #%%--------------------------------------------------------------------------%%#
